@@ -1,4 +1,8 @@
-let userObj = {
-  username: "mike",
-  password: "password",
-};
+const myLibrary = []
+
+function Book() {
+    
+}
+function addBook{
+    
+}
