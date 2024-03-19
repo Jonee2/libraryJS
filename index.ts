@@ -27,7 +27,10 @@ function Createbook(
     year: year,
     read: read,
     getInfo() {
-      return `the book name is ${this.name}, the author is ${this.author}, the year it came out was ${this.year} and ${this.read}`;
+      return `the book name is ${this.name}, 
+      the author is ${this.author}, 
+      the year it came out was ${this.year} 
+      and ${this.read}`;
     },
   };
 }
