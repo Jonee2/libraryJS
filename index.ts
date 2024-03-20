@@ -7,7 +7,7 @@ const exampleBook = {
     return `the book name is ${this.name}, 
     the author is ${this.author}, 
     the year it came out was ${this.year} 
-    and ${this.read}`;
+    and ${this.read ? `you have read the book` : `you haven't read the book`}`;
   },
 };
 
@@ -30,7 +30,7 @@ function Createbook(
       return `the book name is ${this.name}, 
       the author is ${this.author}, 
       the year it came out was ${this.year} 
-      and ${this.read}`;
+      and ${this.read ? "have read the book" : "havent read the book"}`;
     },
   };
 }
