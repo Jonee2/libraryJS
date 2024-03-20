@@ -37,16 +37,21 @@ form.addEventListener("submit", function (e) {
     input === null || input === void 0 ? void 0 : input.value = "";
     let newBook = Createbook(bookname, author, year, read);
     myLibrary.push(newBook);
-    createDiv();
+    createDiv(bookname, author, year, read);
 });
-function createDiv() {
+function createDiv(bookname, author, year, read) {
     let div = document.createElement("div");
-    let p = document.createElement("p");
-    let input = document.createElement("input");
     document.body.appendChild(div);
     div.className = "bookcard";
-    div.appendChild(p);
-    p.className = "pexample";
+    div.innerHTML = `<p>Bookname:</p>
+        <p class="pexample">${bookname}</p>
+          <p>Author:</p>
+          <p class="pexample">${author}</p>
+          <p>Year released:</p>
+          <p class="pexample">${year}</p>
+          <p>Read?</p>
+          <input type="checkbox" checked />
+          <button type="submit">Remove</button>`;
 }
 // function displayBooks{
 //   for (let i = 0; i < myLibrary.length; i++){
