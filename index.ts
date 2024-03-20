@@ -1,10 +1,10 @@
 const exampleBook = {
-  name: "Design Patterns",
+  bookname: "Design Patterns",
   author: "Erich Gamma",
   year: 1994,
   read: false,
   getInfo() {
-    return `the book name is ${this.name}, 
+    return `the book name is ${this.bookname}, 
     the author is ${this.author}, 
     the year it came out was ${this.year} 
     and ${this.read ? `you have read the book` : `you haven't read the book`}`;
@@ -45,7 +45,7 @@ form.addEventListener("submit", function (e) {
   let bookname = document.querySelector(".name").value;
   let author = document.querySelector(".author").value;
   let year = document.querySelector(".year").value;
-  let read = document.querySelector(".read").value;
+  let read = document.querySelector(".read").checked;
 
   input?.value = "";
   let newBook = Createbook(bookname, author, year, read);
