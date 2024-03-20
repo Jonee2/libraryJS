@@ -13,6 +13,10 @@
 input {
   width: 100px;
 }
+input[type="checkbox"] {
+  display: block;
+  width: 20px;
+}
 .pexample {
   background-color: white;
 }
