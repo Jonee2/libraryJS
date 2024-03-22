@@ -60,7 +60,11 @@ function createDiv(bookname, author, year, read) {
 
 const removebtn = document.querySelector(".removebtn");
 const bookdiv = document.querySelector(".mainbookcard");
-
+const removebtn1 = document.querySelector(".removebtn1");
 function removeDiv(bookdiv) {
   bookdiv?.parentNode.remove(this);
 }
+
+removebtn1?.addEventListener("click", () => {
+  bookdiv?.remove();
+});

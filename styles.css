@@ -12,6 +12,7 @@ body {
   text-decoration: none;
   background-color: var(--sub-color);
   min-height: 100vh;
+  font-size: 0.8rem;
 }
 .bookcard,
 .mainbookcard {
