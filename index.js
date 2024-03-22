@@ -30,28 +30,34 @@ const form = document.querySelector(".form");
 form.addEventListener("submit", function (e) {
     e === null || e === void 0 ? void 0 : e.preventDefault();
     const input = document.querySelector(".read");
-    let bookname = document.querySelector(".name").value;
-    let author = document.querySelector(".author").value;
-    let year = document.querySelector(".year").value;
-    let read = document.querySelector(".read").checked;
+    const bookname = document.querySelector(".name").value;
+    const author = document.querySelector(".author").value;
+    const year = document.querySelector(".year").value;
+    const read = document.querySelector(".read").checked;
     input === null || input === void 0 ? void 0 : input.value = "";
     let newBook = Createbook(bookname, author, year, read);
     myLibrary.push(newBook);
     createDiv(bookname, author, year, read);
 });
 function createDiv(bookname, author, year, read) {
-    let div = document.createElement("div");
-    document.body.appendChild(div);
-    div.className = "bookcard";
-    div.innerHTML = `<p>Bookname:</p>
-        <p class="pexample">${bookname}</p>
+    const div = document.createElement("div");
+    const main = document.querySelector('main');
+    main.appendChild(div);
+    div.className = "mainbookcard";
+    div.innerHTML = `
+        
+          <p>Bookname:</p>
+          <p class="pexample">${bookname}</p>
           <p>Author:</p>
-          <p class="pexample">${author}</p>
+          <p class="pexample">
+            ${author}
+          </p>
           <p>Year released:</p>
           <p class="pexample">${year}</p>
           <p>Read?</p>
-          <input type="checkbox" checked />
-          <button type="submit">Remove</button>`;
+          <input class="read" type="checkbox" name="read" value="${read}" />
+          <button type="submit">Remove</button>
+        `;
 }
 // function displayBooks{
 //   for (let i = 0; i < myLibrary.length; i++){

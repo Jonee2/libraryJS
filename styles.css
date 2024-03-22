@@ -9,6 +9,7 @@
   padding: 50px 10px;
   border-radius: 10px;
   border: 5px solid slategrey;
+  width: 120px;
 }
 input {
   width: 100px;
