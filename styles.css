@@ -24,6 +24,23 @@ body {
   border: 5px solid slategrey;
   width: 120px;
 }
+button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  border-style: none;
+  background: var(--main-color);
+  border: var(--sub-color) solid 1px;
+  color: var(--sub-color);
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+button:hover {
+  cursor: pointer;
+  background-color: var(--sub-color);
+  border: var(--main-color) solid 1px;
+  color: var(--main-color);
+}
 input {
   width: 100px;
 }
