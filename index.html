@@ -24,7 +24,7 @@
           <p class="pexample">1994</p>
           <p>Read?</p>
           <input type="checkbox" />
-          <button type="submit">Remove</button>
+          <button class="removebtn" onclick="removeDiv(this)">Remove</button>
         </div>
       </div>
       <div class="bookcard">
@@ -36,12 +36,10 @@
           <label for="year">Year released:</label><br />
           <input class="year" type="number" name="year" /><br />
           <label for="read">Read?</label><br />
-          <input class="read" type="checkbox" name="read" value="false"/>
-          <button class="addbutton" type="submit">Add book</button>
+          <input class="read" type="checkbox" name="read" value="false" />
+          <button class="addbutton">Add book</button>
         </form>
       </div>
-      
-      
     </main>
   </body>
 </html>

@@ -1,16 +1,4 @@
 "use strict";
-// const exampleBook = {
-//   bookname: "Design Patterns",
-//   author: "Erich Gamma",
-//   year: 1994,
-//   read: false,
-//   getInfo() {
-//     return `the book name is ${this.bookname},
-//     the author is ${this.author},
-//     the year it came out was ${this.year}
-//     and ${this.read ? `you have read the book` : `you haven't read the book`}`;
-//   },
-// };
 const myLibrary = [];
 function Createbook(bookname, author, year, read) {
     return {
@@ -27,9 +15,10 @@ function Createbook(bookname, author, year, read) {
     };
 }
 const form = document.querySelector(".form");
-form.addEventListener("submit", function (e) {
+const button = document.querySelector(".addbutton");
+button.addEventListener("click", function (e) {
     e === null || e === void 0 ? void 0 : e.preventDefault();
-    const input = document.querySelector(".read");
+    const input = document.querySelector("input");
     const bookname = document.querySelector(".name").value;
     const author = document.querySelector(".author").value;
     const year = document.querySelector(".year").value;
@@ -41,12 +30,11 @@ form.addEventListener("submit", function (e) {
 });
 function createDiv(bookname, author, year, read) {
     const div = document.createElement("div");
-    const main = document.querySelector('main');
+    const main = document.querySelector("main");
     main.appendChild(div);
     div.className = "mainbookcard";
     div.innerHTML = `
-        
-          <p>Bookname:</p>
+        <p>Bookname:</p>
           <p class="pexample">${bookname}</p>
           <p>Author:</p>
           <p class="pexample">
@@ -56,8 +44,14 @@ function createDiv(bookname, author, year, read) {
           <p class="pexample">${year}</p>
           <p>Read?</p>
           <input class="read" type="checkbox" name="read" value="${read}" />
-          <button type="submit">Remove</button>
+          <button class="removebtn" onclick="removeDiv(this)">Remove</button>
         `;
+}
+const removebtn = document.querySelector(".removebtn");
+const bookdiv = document.querySelector(".mainbookcard");
+function removeDiv(bookdiv) {
+    // e?.preventDefault();
+    bookdiv === null || bookdiv === void 0 ? void 0 : bookdiv.parentNode.remove(this);
 }
 // function displayBooks{
 //   for (let i = 0; i < myLibrary.length; i++){
