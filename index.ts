@@ -62,12 +62,5 @@ const removebtn = document.querySelector(".removebtn");
 const bookdiv = document.querySelector(".mainbookcard");
 
 function removeDiv(bookdiv) {
-  // e?.preventDefault();
   bookdiv?.parentNode.remove(this);
 }
-
-// function displayBooks{
-//   for (let i = 0; i < myLibrary.length; i++){
-
-//   }
-// }

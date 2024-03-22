@@ -50,10 +50,5 @@ function createDiv(bookname, author, year, read) {
 const removebtn = document.querySelector(".removebtn");
 const bookdiv = document.querySelector(".mainbookcard");
 function removeDiv(bookdiv) {
-    // e?.preventDefault();
     bookdiv === null || bookdiv === void 0 ? void 0 : bookdiv.parentNode.remove(this);
 }
-// function displayBooks{
-//   for (let i = 0; i < myLibrary.length; i++){
-//   }
-// }
